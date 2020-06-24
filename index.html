@@ -3,33 +3,30 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>William Charles Umstead Junior</title>
+    <title>Will Umstead</title>
 </head>
 
 <body>
-    <nav>
-    </nav>
+    <header>
+        <nav></nav>
+    </header>
 
-    <div class="routes"></div>
+    <main>
+        <div class="intro">
+            <h2>Hi, my name is</h2>
+            <h1>William Charles Umstead Junior</h1>
+            <h2>I'm a Full Stack Web Developer</h2>
+        </div>
+
+        <div class="skills">
+            <h2>Specializing in:</h2>
+        </div>
+    </main>
 
     <footer>
         <h2>Get in Touch</h2>
     </footer>
-    <script src="node_modules/vanilla-router/dist/vanilla-router.js"></script>
-    <script>
-        var router = new Router({
-            mode: 'history',
-            page404: path => console.log(`/${ path } not found`)
-        });
-
-        router
-            .add('', _ => console.log('home'))
-            .add('/about', _ => console.log('about'))
-            .check()
-            .addUriListener();
-
-        window.router = router;
-    </script>
+    <script src="js/nav.js"></script>
 </body>
 
 </html>
