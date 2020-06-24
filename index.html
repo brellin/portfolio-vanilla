@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>William Charles Umstead Junior</title>
+</head>
+
+<body>
+    <nav>
+    </nav>
+
+    <div class="routes"></div>
+
+    <footer>
+        <h2>Get in Touch</h2>
+    </footer>
+    <script src="node_modules/vanilla-router/dist/vanilla-router.js"></script>
+    <script>
+        var router = new Router({
+            mode: 'history',
+            page404: path => console.log(`/${ path } not found`)
+        });
+
+        router
+            .add('', _ => console.log('home'))
+            .add('/about', _ => console.log('about'))
+            .check()
+            .addUriListener();
+
+        window.router = router;
+    </script>
+</body>
+
+</html>
