@@ -56,7 +56,7 @@ body header nav a.Home:hover ~ hr {
   transform: translate(-145px, 21px) !important;
   width: 5rem !important;
 }
-body header nav a.Home.router-link-active ~ hr {
+body header nav a.Home.active ~ hr {
   -webkit-transform: translate(-145px, 21px);
   -moz-transform: translate(-145px, 21px);
   -ms-transform: translate(-145px, 21px);
@@ -70,14 +70,14 @@ body header nav a.About:hover ~ hr {
   transform: translate(-55px, 21px) !important;
   width: 5rem !important;
 }
-body header nav a.About.router-link-active ~ hr {
+body header nav a.About.active ~ hr {
   -webkit-transform: translate(-55px, 21px);
   -moz-transform: translate(-55px, 21px);
   -ms-transform: translate(-55px, 21px);
   transform: translate(-55px, 21px);
   width: 5rem;
 }
-body header nav a.Work:hover ~ hr, body header nav a.Work.router-link-active ~ hr {
+body header nav a.Work:hover ~ hr, body header nav a.Work.active ~ hr {
   -webkit-transform: translate(36px, 21px);
   -moz-transform: translate(36px, 21px);
   -ms-transform: translate(36px, 21px);

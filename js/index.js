@@ -8,6 +8,8 @@ applyToEach(document.querySelector('nav'), el => {
     if (el.innerText !== 'Resume') el.onclick = e => {
         e.preventDefault();
         window.history.pushState(null, el.innerText, el.href);
+        applyToEach(document.querySelector('nav'), el => el.classList.remove('active'));
+        el.classList.add('active');
     };
 });
 
