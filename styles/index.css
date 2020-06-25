@@ -1,0 +1,195 @@
+html {
+  font-size: 67.5%;
+}
+
+body {
+  background: #d5fdfd;
+  margin: 0;
+  font-family: "Do Hyeon", sans-serif;
+}
+body header {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  min-height: 50px;
+  height: 10%;
+  position: fixed;
+  top: 0;
+  background: linear-gradient(#099 90%, 95%, transparent 100%);
+  z-index: 5;
+}
+body header nav {
+  margin: 0 auto;
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  position: relative;
+  max-width: 100%;
+}
+body header nav a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  padding: 5px 15px;
+  margin: 0 5px;
+  outline: none;
+}
+body header nav a.Home:hover ~ hr {
+  -webkit-transform: translate(-145px, 21px) !important;
+  -moz-transform: translate(-145px, 21px) !important;
+  -ms-transform: translate(-145px, 21px) !important;
+  transform: translate(-145px, 21px) !important;
+  width: 5rem !important;
+}
+body header nav a.Home.router-link-active ~ hr {
+  -webkit-transform: translate(-145px, 21px);
+  -moz-transform: translate(-145px, 21px);
+  -ms-transform: translate(-145px, 21px);
+  transform: translate(-145px, 21px);
+  width: 5rem;
+}
+body header nav a.About:hover ~ hr {
+  -webkit-transform: translate(-55px, 21px) !important;
+  -moz-transform: translate(-55px, 21px) !important;
+  -ms-transform: translate(-55px, 21px) !important;
+  transform: translate(-55px, 21px) !important;
+  width: 5rem !important;
+}
+body header nav a.About.router-link-active ~ hr {
+  -webkit-transform: translate(-55px, 21px);
+  -moz-transform: translate(-55px, 21px);
+  -ms-transform: translate(-55px, 21px);
+  transform: translate(-55px, 21px);
+  width: 5rem;
+}
+body header nav a.Work:hover ~ hr, body header nav a.Work.router-link-active ~ hr {
+  -webkit-transform: translate(36px, 21px);
+  -moz-transform: translate(36px, 21px);
+  -ms-transform: translate(36px, 21px);
+  transform: translate(36px, 21px);
+  width: 4.75rem;
+}
+body header nav a:nth-child(4).active ~ hr, body header nav a:nth-child(4):hover ~ hr {
+  -webkit-transform: translate(135px, 21px);
+  -moz-transform: translate(135px, 21px);
+  -ms-transform: translate(135px, 21px);
+  transform: translate(135px, 21px);
+  width: 7rem;
+}
+body header nav hr {
+  width: 50px;
+  position: absolute;
+  border: 1px solid white;
+  -webkit-transform: translate(-139px, 21px);
+  -moz-transform: translate(-139px, 21px);
+  -ms-transform: translate(-139px, 21px);
+  transform: translate(-139px, 21px);
+  user-select: none;
+  z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+body main {
+  margin: 75px 25px 0;
+}
+body main div.intro {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: max-content;
+  width: intrinsic;
+  position: relative;
+}
+body main div.intro h1 {
+  color: #001a1a;
+  font-family: "Gugi", cursive;
+  font-size: 4rem;
+  margin: 0;
+}
+@media (max-width: 500px) {
+  body main div.intro h1 {
+    font-size: 2rem;
+  }
+}
+body main div.intro h3,
+body main div.intro h4 {
+  color: #099;
+  font-size: 25px;
+  padding: 0 5px;
+  transition: 1s ease-out;
+}
+@media (max-width: 500px) {
+  body main div.intro h3,
+body main div.intro h4 {
+    font-size: 1.5rem;
+  }
+}
+body main div.intro h3 {
+  border-bottom: 1px solid #099;
+}
+body main div.intro h4 {
+  border-top: 1px solid #099;
+  align-self: flex-end;
+}
+body main div.skills {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  max-width: 42%;
+  width: 100%;
+  transition: 1.5s ease-out;
+}
+@media (max-width: 500px) {
+  body main div.skills {
+    max-width: 100%;
+  }
+}
+body main div.skills h2 {
+  width: 100%;
+}
+body main div.skills img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin: 2.5px;
+  flex-basis: 17%;
+}
+@media (max-width: 500px) {
+  body main div.skills img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 2.5px auto;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
