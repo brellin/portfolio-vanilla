@@ -10,6 +10,7 @@ applyToEach(document.querySelector('nav'), el => {
         window.history.pushState(null, el.innerText, el.href);
         applyToEach(document.querySelector('nav'), el => el.classList.remove('active'));
         el.classList.add('active');
+        loadPage();
     };
 });
 
@@ -22,6 +23,10 @@ const clear = el => {
     }
 };
 
-const page = window.location.pathname === '/' ? 'home' : window.location.pathname.slice(1);
+function loadPage() {
+    clear(main);
+    const page = window.location.pathname === '/' ? 'home' : window.location.pathname.slice(1);
+    if (routes[ page ]) routes[ page ].forEach(el => main.appendChild(el));
+}
 
-if (routes[ page ]) routes[ page ].forEach(el => main.appendChild(el));
+loadPage();
