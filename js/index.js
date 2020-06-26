@@ -24,6 +24,7 @@ const clear = el => {
 };
 
 function loadPage() {
+    console.log(window.location.pathname);
     clear(main);
     const page = window.location.pathname === '/' ? 'home' : window.location.pathname.slice(1);
     if (routes[ page ]) routes[ page ].forEach(el => main.appendChild(el));
