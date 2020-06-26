@@ -7,5 +7,5 @@
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  quety = {path = ":path"}
+  query = {path = ":path"}
   status = 200
