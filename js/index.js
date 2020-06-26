@@ -1,10 +1,8 @@
+import { applyToEach, clear } from './utils.js';
 import { routes } from './nav.js';
 
 // the main element to be reloaded
 const main = document.querySelector('main');
-
-// applies a callback function to each child of an element
-const applyToEach = (el, cb) => { for (let i = 0; i < el.childElementCount; i++) cb(el.children[ i ]); };
 
 // gives each link in nav an onclick
 applyToEach(document.querySelector('nav'), el => {
@@ -18,16 +16,6 @@ applyToEach(document.querySelector('nav'), el => {
     };
 });
 
-// clears everything from within the given element
-const clear = el => {
-    const len = el.childElementCount;
-    let i = 0;
-    while (i < len) {
-        el.removeChild(el.children[ 0 ]);
-        i++;
-    }
-};
-
 function loadPage() {
     // get and set the pathname to be without a '/' and capitalize first letter
     const path = window.location.pathname
@@ -36,6 +24,8 @@ function loadPage() {
         .join('');
     // set the title of the page
     document.querySelector('title').innerText = `Will Umstead${ path ? ' - ' + path : '' }`;
+
+    console.log(path);
 
     // clear what is currently in main
     clear(main);

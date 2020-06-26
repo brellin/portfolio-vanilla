@@ -1,0 +1,100 @@
+&.work {
+    @include flex($direction: column, $align: center);
+    width: 95%;
+    
+    h2 {
+        font-family: $header-font;
+        font-size: 3rem;
+        color: $accent;
+        -webkit-text-stroke: 1px $mid;
+    }
+    
+    div.projects {
+        @include flex($direction: column, $align: center);
+        width: 90%;
+        
+        div.Project {
+            width: 100%;
+            background-size: cover;
+            text-align: center;
+            min-height: 150px;
+            cursor: pointer;
+            padding: 2.5px 0;
+            background-attachment: fixed;
+            background-position: center;
+            margin-bottom: 50px;
+            border-radius: 50px;
+            padding: 20px 50px;
+            transition: 0.5s ease-out;
+            
+            @media (max-width: 500px) {
+                border-radius: 25%;
+                width: 90%;
+            }
+            
+            p {
+                color: whitesmoke;
+                width: 90%;
+                font-size: 2rem;
+                user-select: none;
+                text-shadow: 5px 5px 25px black, 5px 5px 25px black;
+            }
+            
+            a {
+                font-size: 2rem;
+                color: $accent;
+                text-decoration: none;
+                position: relative;
+                width: 100%;
+                
+                &::before {
+                    content: "";
+                    position: absolute;
+                    height: 2px;
+                    width: 0px;
+                    transform: translate(-50vw, 20px);
+                    transition: 0.5s ease-out;
+                }
+                
+                &:hover {
+                    &::before {
+                        width: 100%;
+                        background: $accent;
+                        transform: translateY(20px);
+                    }
+                }
+            }
+            
+            &.BlackHole {
+                background-image: linear-gradient(#000000aa, #000000aa),
+                url(../images/projects/blackhole.png);
+                
+                &:hover {
+                    background-image: linear-gradient(#00000080, #00000080),
+                    url(../images/projects/blackhole.png);
+                }
+            }
+            
+            &.Howl {
+                background-image: linear-gradient(#000000aa, #000000aa),
+                url(../images/projects/howl.png);
+                
+                &:hover {
+                    background-image: linear-gradient(#00000080, #00000080),
+                    url(../images/projects/howl.png);
+                }
+            }
+            
+            &.Chao {
+                background-image: linear-gradient(#000000aa, #000000aa),
+                url(../images/projects/chao.png);
+                
+                &:hover {
+                    background-image: linear-gradient(#00000080, #00000080),
+                    url(../images/projects/chao.png);
+                }
+            }
+        }
+    }
+    
+}

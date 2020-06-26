@@ -13,16 +13,22 @@ body {
     width: 100vw;
     -webkit-font-smoothing: antialiased;
 
-   @import './header.scss'; 
+    @media (max-width: 500px) {
+        width: 95vw;
+    }
+
+    @import './header.scss'; 
     
     main {
         margin: 75px 25px;
         min-height: 55vh;
-        max-width: 100%;
+        width: 95%;
 
        @import './home.scss'; 
 
        @import './about.scss';
+
+       @import './work.scss';
 
     }
 
