@@ -4,6 +4,5 @@
 [[redirects]]
   from = "/*"
   to = "https://brellin.dev"
-  query = {path = ":path"}
   status = 200
   force = true
