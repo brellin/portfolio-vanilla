@@ -22,6 +22,12 @@ const clear = el => {
 };
 
 function loadPage() {
+    const path = window.location.pathname
+        .split('/')
+        .map(w => w.charAt(0).toUpperCase() + w.slice(1).replace('.html', ''))
+        .join(' ');
+    document.querySelector('title').innerText = `Will Umstead${ path !== ' ' ? '- ' + path : '' }`;
+
     clear(main);
     main.classList = [];
     const page = window.location.pathname.slice(1) === '' ? 'home' : window.location.pathname.slice(1);
