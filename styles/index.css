@@ -19,8 +19,7 @@ body header {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
-  min-height: 50px;
-  height: 10%;
+  height: 50px;
   position: fixed;
   top: 0;
   background: linear-gradient(#099 90%, 95%, transparent 100%);
