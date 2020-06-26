@@ -8,7 +8,6 @@ body {
   font-family: "Do Hyeon", sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  width: 100vw;
   -webkit-font-smoothing: antialiased;
 }
 @media (max-width: 500px) {
@@ -112,9 +111,8 @@ body header nav hr {
   transition: 0.5s ease-in-out;
 }
 body main {
-  margin: 75px 25px;
+  padding: 75px 25px;
   min-height: 55vh;
-  width: 95%;
 }
 body main.home {
   display: flex;
@@ -283,7 +281,6 @@ body main.work {
   align-items: center;
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 95%;
 }
 body main.work h2 {
   font-family: "Gugi", cursive;
@@ -302,10 +299,9 @@ body main.work div.projects {
   align-items: center;
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  width: 90%;
 }
 body main.work div.projects div.Project {
-  width: 100%;
+  width: 90%;
   background-size: cover;
   text-align: center;
   min-height: 150px;
@@ -321,7 +317,7 @@ body main.work div.projects div.Project {
 @media (max-width: 500px) {
   body main.work div.projects div.Project {
     border-radius: 25%;
-    width: 90%;
+    width: 80%;
   }
 }
 body main.work div.projects div.Project p {

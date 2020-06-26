@@ -1,6 +1,5 @@
 &.work {
     @include flex($direction: column, $align: center);
-    width: 95%;
     
     h2 {
         font-family: $header-font;
@@ -11,10 +10,9 @@
     
     div.projects {
         @include flex($direction: column, $align: center);
-        width: 90%;
         
         div.Project {
-            width: 100%;
+            width: 90%;
             background-size: cover;
             text-align: center;
             min-height: 150px;
@@ -29,7 +27,7 @@
             
             @media (max-width: 500px) {
                 border-radius: 25%;
-                width: 90%;
+                width: 80%;
             }
             
             p {
