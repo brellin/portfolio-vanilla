@@ -15,18 +15,16 @@ footer {
     text-align: center;
   }
 
-  div {
+  i {
     @include flex($direction: column, $align: center);
     transition: 0.3s ease-out;
+    font-size: 5rem;
+    cursor: pointer;
+    color: $mid;
 
     &:hover {
       @include transform(scale(1.2));
     }
 
-    svg.Link {
-      font-size: 5rem;
-      cursor: pointer;
-      color: $mid;
-    }
   }
 }

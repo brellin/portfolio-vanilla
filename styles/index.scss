@@ -11,12 +11,13 @@ body {
     overflow-x: hidden;
     scroll-behavior: smooth;
     width: 100vw;
+    -webkit-font-smoothing: antialiased;
 
    @import './header.scss'; 
     
     main {
         margin: 75px 25px;
-        min-height: 60vh;
+        min-height: 55vh;
         max-width: 100%;
 
        @import './home.scss'; 

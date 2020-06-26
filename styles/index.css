@@ -9,6 +9,7 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
   width: 100vw;
+  -webkit-font-smoothing: antialiased;
 }
 body header {
   display: flex;
@@ -107,7 +108,7 @@ body header nav hr {
 }
 body main {
   margin: 75px 25px;
-  min-height: 60vh;
+  min-height: 55vh;
   max-width: 100%;
 }
 body main.home {
@@ -293,7 +294,7 @@ body footer h2 {
   width: 100%;
   text-align: center;
 }
-body footer div {
+body footer i {
   display: flex;
   display: -webkit-flex;
   -webkit-flex-direction: column;
@@ -305,17 +306,15 @@ body footer div {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   transition: 0.3s ease-out;
+  font-size: 5rem;
+  cursor: pointer;
+  color: #099;
 }
-body footer div:hover {
+body footer i:hover {
   -webkit-transform: scale(1.2);
   -moz-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
-}
-body footer div svg.Link {
-  font-size: 5rem;
-  cursor: pointer;
-  color: #099;
 }
 
 /*# sourceMappingURL=index.css.map */

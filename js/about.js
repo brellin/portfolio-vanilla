@@ -1,6 +1,9 @@
 const header = document.createElement('h1');
 header.innerText = 'About';
 
+const me = document.createElement('img');
+me.src = '/images/will.jpg';
+
 const aboutText = document.createElement('p');
 aboutText.innerText = `Hi! My name is Will. I started working with HTML, CSS, and PHP in 2008 during the summer of my sophomore year when I was in high school.
 
@@ -22,4 +25,4 @@ During my time at Lambda, I have been able to research, learn, and develop my pr
 
 *curtain closes*`;
 
-export default [ header, aboutText ];
+export default [ header, me, aboutText ];
