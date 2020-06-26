@@ -22,9 +22,10 @@ const clear = el => {
 };
 
 function loadPage() {
-    console.log(window.location.pathname);
     clear(main);
+    main.classList = [];
     const page = window.location.pathname.slice(1) === '' ? 'home' : window.location.pathname.slice(1);
+    main.classList.add(page);
     applyToEach(document.querySelector('nav'), el => el.classList.remove('active'));
     document.querySelector(`.${ page[ 0 ].toUpperCase() + page.slice(1) }`).classList.add('active');
     if (routes[ page ]) routes[ page ].forEach(el => main.appendChild(el));

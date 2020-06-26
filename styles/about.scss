@@ -1,0 +1,42 @@
+&.about {
+    @include flex($direction: column, $align: center);
+    max-width: 100%;
+    h1 {
+        font-size: 4rem;
+        font-family: $header-font;
+    }
+
+    img {
+        margin: 0 auto;
+        border-radius: 50%;
+        width: 150px;
+    }
+
+    p {
+        white-space: pre-line;
+        font-size: 2rem;
+        width: 100%;
+
+        a {
+            color: whitesmoke;
+            text-decoration: none;
+            position: relative;
+
+            &::before {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 100%;
+                transform: translate(-400%, 22px);
+                transition: 0.3s ease;
+            }
+
+            &:hover {
+                &::before {
+                    background: whitesmoke;
+                    transform: translateY(22px);
+                }
+            }
+        }
+    }
+}

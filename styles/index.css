@@ -6,6 +6,9 @@ body {
   background: #d5fdfd;
   margin: 0;
   font-family: "Do Hyeon", sans-serif;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  width: 100vw;
 }
 body header {
   display: flex;
@@ -19,7 +22,7 @@ body header {
   -webkit-flex-wrap: nowrap;
   flex-wrap: nowrap;
   width: 100%;
-  height: 50px;
+  height: 65px;
   position: fixed;
   top: 0;
   background: linear-gradient(#099 90%, 95%, transparent 100%);
@@ -103,9 +106,39 @@ body header nav hr {
   transition: 0.5s ease-in-out;
 }
 body main {
-  margin: 75px 25px 0;
+  margin: 75px 25px;
+  min-height: 60vh;
+  max-width: 100%;
 }
-body main div.intro {
+body main.home {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  width: 100%;
+  user-select: none;
+}
+@media (max-width: 500px) {
+  body main.home {
+    display: flex;
+    display: -webkit-flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+}
+body main.home div.intro {
   display: flex;
   display: -webkit-flex;
   -webkit-flex-direction: column;
@@ -120,38 +153,38 @@ body main div.intro {
   width: intrinsic;
   position: relative;
 }
-body main div.intro h1 {
+body main.home div.intro h1 {
   color: #001a1a;
   font-family: "Gugi", cursive;
   font-size: 4rem;
   margin: 0;
 }
 @media (max-width: 500px) {
-  body main div.intro h1 {
+  body main.home div.intro h1 {
     font-size: 2rem;
   }
 }
-body main div.intro h3,
-body main div.intro h4 {
+body main.home div.intro h3,
+body main.home div.intro h4 {
   color: #099;
   font-size: 25px;
   padding: 0 5px;
   transition: 1s ease-out;
 }
 @media (max-width: 500px) {
-  body main div.intro h3,
-body main div.intro h4 {
+  body main.home div.intro h3,
+body main.home div.intro h4 {
     font-size: 1.5rem;
   }
 }
-body main div.intro h3 {
+body main.home div.intro h3 {
   border-bottom: 1px solid #099;
 }
-body main div.intro h4 {
+body main.home div.intro h4 {
   border-top: 1px solid #099;
   align-self: flex-end;
 }
-body main div.skills {
+body main.home div.skills {
   display: flex;
   display: -webkit-flex;
   -webkit-flex-direction: row;
@@ -168,14 +201,14 @@ body main div.skills {
   transition: 1.5s ease-out;
 }
 @media (max-width: 500px) {
-  body main div.skills {
+  body main.home div.skills {
     max-width: 100%;
   }
 }
-body main div.skills h2 {
+body main.home div.skills h2 {
   width: 100%;
 }
-body main div.skills img {
+body main.home div.skills img {
   width: 100px;
   height: 100px;
   object-fit: contain;
@@ -183,12 +216,106 @@ body main div.skills img {
   flex-basis: 17%;
 }
 @media (max-width: 500px) {
-  body main div.skills img {
+  body main.home div.skills img {
     width: 50px;
     height: 50px;
     border-radius: 5px;
     margin: 2.5px auto;
   }
+}
+body main.about {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+body main.about h1 {
+  font-size: 4rem;
+  font-family: "Gugi", cursive;
+}
+body main.about img {
+  margin: 0 auto;
+  border-radius: 50%;
+  width: 150px;
+}
+body main.about p {
+  white-space: pre-line;
+  font-size: 2rem;
+  width: 100%;
+}
+body main.about p a {
+  color: whitesmoke;
+  text-decoration: none;
+  position: relative;
+}
+body main.about p a::before {
+  content: "";
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  transform: translate(-400%, 22px);
+  transition: 0.3s ease;
+}
+body main.about p a:hover::before {
+  background: whitesmoke;
+  transform: translateY(22px);
+}
+body footer {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+  -webkit-align-items: flex-start;
+  align-items: flex-start;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto 20px;
+  transition: 1s ease-out;
+  bottom: 0;
+}
+@media (max-width: 500px) {
+  body footer {
+    width: 100%;
+  }
+}
+body footer h2 {
+  width: 100%;
+  text-align: center;
+}
+body footer div {
+  display: flex;
+  display: -webkit-flex;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  transition: 0.3s ease-out;
+}
+body footer div:hover {
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+body footer div svg.Link {
+  font-size: 5rem;
+  cursor: pointer;
+  color: #099;
 }
 
 /*# sourceMappingURL=index.css.map */
