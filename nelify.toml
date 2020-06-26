@@ -1,5 +1,5 @@
 [Settings]
-  ID = 'ca83ee73-ea7d-4408-8b25-fb0cd686a4e1'  
+  ID = "ca83ee73-ea7d-4408-8b25-fb0cd686a4e1"
 
 [[redirects]]
   from = "/*"
