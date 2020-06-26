@@ -10,7 +10,6 @@ const skills = document.createElement('div');
 skills.classList.add('skills');
 skills.innerHTML = `<h2>Specializing in:</h2>`;
 skillImgs.forEach(skill => {
-    console.log(skill);
     const img = document.createElement('img');
     img.src = '../images/skills/' + skill;
     skills.appendChild(img);
