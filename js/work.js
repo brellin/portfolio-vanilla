@@ -1,6 +1,6 @@
 import projects from '../images/projects/index.js';
 
-const pHeader = document.createElement('h2');
+const pHeader = document.createElement('h1');
 pHeader.innerText = 'Projects';
 
 const projectsDiv = document.createElement('div');

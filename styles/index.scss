@@ -19,8 +19,8 @@ body {
     @import './header.scss'; 
     
     main {
-        padding: 75px 25px;
-        min-height: 55vh;
+        padding: 75px 25px 25px;
+        min-height: 63vh;
 
        @import './home.scss'; 
 
