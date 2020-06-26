@@ -1,6 +1,5 @@
 &.home {
     @include flex($align: flex-start, $justify: space-between);
-    width: 100%;
     user-select: none;
     
     @media (max-width: 500px) {
